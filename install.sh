@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "Installing java"
+
+
+sudo apt update
+sudo apt install openjdk-11-jre
+java -version
+
 echo "Getting jenkins"
 
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
@@ -14,5 +21,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 
 sudo apt-get install jenkins
+
 
 
